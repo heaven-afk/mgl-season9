@@ -6,102 +6,62 @@
   <title>Add MGL Season 9 to Calendar</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0d0d0d;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-    }
-
-    .card {
-      background: #1a1a2e;
-      border: 1px solid #7289da44;
-      border-radius: 16px;
-      padding: 40px 36px;
-      max-width: 420px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 0 40px #7289da22;
-    }
-
+    body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0d0d0d; font-family: 'Segoe UI', sans-serif; color: #fff; }
+    .card { background: #1a1a2e; border: 1px solid #7289da44; border-radius: 16px; padding: 40px 36px; max-width: 420px; width: 90%; text-align: center; box-shadow: 0 0 40px #7289da22; }
     .logo { font-size: 48px; margin-bottom: 12px; }
-
     h1 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
-
     .subtitle { font-size: 0.9rem; color: #aaa; margin-bottom: 28px; }
-
-    .events {
-      background: #0d0d1a;
-      border-radius: 10px;
-      padding: 16px;
-      margin-bottom: 28px;
-      text-align: left;
-    }
-
-    .event {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid #ffffff10;
-    }
-
+    .events { background: #0d0d1a; border-radius: 10px; padding: 16px; margin-bottom: 28px; text-align: left; }
+    .event { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; border-bottom: 1px solid #ffffff10; }
     .event:last-child { border-bottom: none; }
-
-    .event-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #7289da;
-      margin-top: 5px;
-      flex-shrink: 0;
-    }
-
+    .event-dot { width: 8px; height: 8px; border-radius: 50%; background: #7289da; margin-top: 5px; flex-shrink: 0; }
     .event-name { font-size: 0.85rem; font-weight: 600; color: #fff; }
     .event-date { font-size: 0.75rem; color: #888; margin-top: 2px; }
-
-    .divider {
-      font-size: 0.75rem;
-      color: #555;
-      margin: 6px 0 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px;
-      background: #7289da;
-      color: #fff;
-      font-size: 0.95rem;
-      font-weight: 700;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background 0.2s;
-      margin-bottom: 10px;
-    }
-
+    .divider { font-size: 0.75rem; color: #555; margin: 6px 0 14px; text-transform: uppercase; letter-spacing: 1px; }
+    .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; background: #7289da; color: #fff; font-size: 0.95rem; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; text-decoration: none; transition: background 0.2s; margin-bottom: 10px; }
     .btn:hover { background: #5f73bc; }
-
-    .btn-secondary {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 13px;
-      background: transparent;
-      color: #aaa;
-      font-size: 0.9rem;
-      font-weight: 600;
-      border: 1px solid #ffffff22
+    .btn-secondary { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 13px; background: transparent; color: #aaa; font-size: 0.9rem; font-weight: 600; border: 1px solid #ffffff22; border-radius: 10px; cursor: pointer; text-decoration: none; transition: all 0.2s; margin-bottom: 10px; }
+    .btn-secondary:hover { background: #ffffff11; color: #fff; }
+    .platform-note { font-size: 0.72rem; color: #555; margin-top: 4px; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">🎮</div>
+    <h1>Major Gaming League</h1>
+    <p class="subtitle">Season 9 — Add all events to your calendar</p>
+    <div class="events">
+      <div class="event">
+        <div class="event-dot"></div>
+        <div>
+          <div class="event-name">Registration Start</div>
+          <div class="event-date">March 25, 2026 · 9:00 AM UTC</div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-dot"></div>
+        <div>
+          <div class="event-name">Tier 3–5 Start</div>
+          <div class="event-date">April 21, 2026 · 6:50 PM UTC</div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-dot"></div>
+        <div>
+          <div class="event-name">Tier 1–2 Start</div>
+          <div class="event-date">April 26, 2026 · 6:50 PM UTC</div>
+        </div>
+      </div>
+    </div>
+    <a class="btn" href="webcal://gist.githubusercontent.com/heaven-afk/c2ec28faef35b4124ca3af37b7fc985b/raw/ac2a06014a5066b1fbbe5b64eb3e4eb9e1412901/mgl-season9.ics">
+      🍎 Add to Calendar
+    </a>
+    <p class="platform-note">Best for iPhone, iPad & Mac — opens Calendar app instantly</p>
+    <div class="divider">— or —</div>
+    <a class="btn-secondary" href="https://gist.githubusercontent.com/heaven-afk/c2ec28faef35b4124ca3af37b7fc985b/raw/ac2a06014a5066b1fbbe5b64eb3e4eb9e1412901/mgl-season9.ics" download="MGL_Season9.ics">
+      ⬇️ Download .ics File
+    </a>
+    <p class="platform-note">For Windows & Android — open the downloaded file to import</p>
+  </div>
+</body>
+</html>
