@@ -8,7 +8,8 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #0d0d0d; font-family: 'Segoe UI', sans-serif; color: #fff; }
     .card { background: #1a1a2e; border: 1px solid #7289da44; border-radius: 16px; padding: 40px 36px; max-width: 420px; width: 90%; text-align: center; box-shadow: 0 0 40px #7289da22; }
-    .logo { font-size: 48px; margin-bottom: 12px; }
+    .logo { display: flex; justify-content: center; margin-bottom: 16px; }
+    .logo img { width: 80px; height: 80px; object-fit: contain; }
     h1 { font-size: 1.4rem; font-weight: 700; color: #fff; margin-bottom: 6px; }
     .subtitle { font-size: 0.9rem; color: #aaa; margin-bottom: 28px; }
     .events { background: #0d0d1a; border-radius: 10px; padding: 16px; margin-bottom: 28px; text-align: left; }
@@ -17,19 +18,42 @@
     .event-dot { width: 8px; height: 8px; border-radius: 50%; background: #7289da; margin-top: 5px; flex-shrink: 0; }
     .event-name { font-size: 0.85rem; font-weight: 600; color: #fff; }
     .event-date { font-size: 0.75rem; color: #888; margin-top: 2px; }
-    .divider { font-size: 0.75rem; color: #555; margin: 6px 0 14px; text-transform: uppercase; letter-spacing: 1px; }
-    .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; background: #7289da; color: #fff; font-size: 0.95rem; font-weight: 700; border: none; border-radius: 10px; cursor: pointer; text-decoration: none; transition: background 0.2s; margin-bottom: 10px; }
+    .divider { font-size: 0.75rem; color: #555; margin: 10px 0 16px; text-transform: uppercase; letter-spacing: 1px; }
+    .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 14px 20px;
+      background: #7289da;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      margin-bottom: 10px;
+    }
     .btn:hover { background: #5f73bc; }
-    .btn-secondary { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 13px; background: transparent; color: #aaa; font-size: 0.9rem; font-weight: 600; border: 1px solid #ffffff22; border-radius: 10px; cursor: pointer; text-decoration: none; transition: all 0.2s; margin-bottom: 10px; }
-    .btn-secondary:hover { background: #ffffff11; color: #fff; }
-    .platform-note { font-size: 0.72rem; color: #555; margin-top: 4px; margin-bottom: 10px; }
+    .btn.android { background: #2a2a2a; color: #A4C639; border: 1px solid #A4C63966; }
+    .btn.android:hover { background: #333; }
+    .btn svg { flex-shrink: 0; }
+    .platform-note { font-size: 0.72rem; color: #555; margin-top: 2px; margin-bottom: 12px; }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="logo">🎮</div>
+
+    <div class="logo">
+      <img src="logo.png" alt="MGL Logo" />
+    </div>
+
     <h1>Major Gaming League</h1>
     <p class="subtitle">Season 9 — Add all events to your calendar</p>
+
     <div class="events">
       <div class="event">
         <div class="event-dot"></div>
@@ -53,15 +77,39 @@
         </div>
       </div>
     </div>
+
+    <!-- Apple Button -->
     <a class="btn" href="webcal://gist.githubusercontent.com/heaven-afk/c2ec28faef35b4124ca3af37b7fc985b/raw/ac2a06014a5066b1fbbe5b64eb3e4eb9e1412901/mgl-season9.ics">
-      🍎 Add to Calendar
+      <svg width="22" height="22" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#FFFFFF" d="M823.5 617.5c-1.3-100.2 81.8-148.3 85.5-150.5-46.5-67.9-118.8-77.1-144.5-78.2-61.3-6.3-119.5 36.1-150.6 36.1-31.1 0-78.4-35.1-129.5-34.1-67.2 1-129.1 39.1-163.7 99.2-69.8 121.2-17.8 300.5 50.1 398.8 33.2 48 72.8 101.8 124.9 99.9 49.9-1.9 68.8-32.2 129.1-32.2 60.3 0 77.4 32.2 130.1 31.2 53.7-1 88.5-48.9 121.5-97.1 38.1-55.7 53.8-109.6 54.7-112.5-1.2-.5-106.6-40.9-107.6-160.6z"/>
+        <path fill="#FFFFFF" d="M685.1 270.2c27.6-33.5 46.2-80 41.1-126.4-39.8 1.6-88.1 26.5-116.7 59.9-25.6 29.8-48 77.3-42 122.3 44.4 3.4 89.9-22.3 117.6-55.8z"/>
+      </svg>
+      Add to Apple Calendar
     </a>
-    <p class="platform-note">Best for iPhone, iPad & Mac — opens Calendar app instantly</p>
+    <p class="platform-note">iPhone, iPad & Mac — opens Calendar app instantly</p>
+
     <div class="divider">— or —</div>
-    <a class="btn-secondary" href="https://gist.githubusercontent.com/heaven-afk/c2ec28faef35b4124ca3af37b7fc985b/raw/ac2a06014a5066b1fbbe5b64eb3e4eb9e1412901/mgl-season9.ics" download="MGL_Season9.ics">
-      ⬇️ Download .ics File
+
+    <!-- Android Button -->
+    <a class="btn android" href="https://calendar.google.com/calendar/r?cid=https://gist.githubusercontent.com/heaven-afk/c2ec28faef35b4124ca3af37b7fc985b/raw/ac2a06014a5066b1fbbe5b64eb3e4eb9e1412901/mgl-season9.ics">
+      <svg width="22" height="22" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <g fill="#A4C639">
+          <rect x="41" y="96" width="26" height="74" rx="13" />
+          <rect x="189" y="96" width="26" height="74" rx="13" />
+          <path d="M74 96h108v81c0 10.5-8.5 19-19 19H93c-10.5 0-19-8.5-19-19V96z" />
+          <rect x="91" y="196" width="26" height="44" rx="13" />
+          <rect x="139" y="196" width="26" height="44" rx="13" />
+          <path d="M74 88.2c0-29.8 24.2-54 54-54s54 24.2 54 54H74z" />
+          <rect x="90" y="12" width="6" height="28" rx="3" transform="rotate(-30 93 40)" />
+          <rect x="160" y="12" width="6" height="28" rx="3" transform="rotate(30 163 40)" />
+        </g>
+        <circle cx="103" cy="67" r="5" fill="white" />
+        <circle cx="153" cy="67" r="5" fill="white" />
+      </svg>
+      Add to Google Calendar
     </a>
-    <p class="platform-note">For Windows & Android — open the downloaded file to import</p>
+    <p class="platform-note">Android & Windows — opens Google Calendar to import</p>
+
   </div>
 </body>
 </html>
